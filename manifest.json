@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Crawling",
+  "version": "1.0",
+  "description": "Crawl data from twitter page from SKYMORE",
+  "browser_action": {
+    "default_icon": "images/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["js/jquery-3.6.0.min.js", "js/FileSaver.js", "js/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "background",
+    "unlimitedStorage"
+  ]
+}
